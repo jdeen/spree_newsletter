@@ -1,2 +1,5 @@
-class Spree::Newletter < ActiveRecord::Base
+module Spree
+  class Newletter < ActiveRecord::Base
+
+  end
 end

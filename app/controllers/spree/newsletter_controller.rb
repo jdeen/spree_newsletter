@@ -2,7 +2,7 @@ module Spree
   class NewsletterController < Spree::StoreController
     
     def store
-      newsletter = Newsletter.create(newsletter_params)
+      newsletter = Spree::Newsletter.create(newsletter_params)
 
       respond_to do |format|
         
