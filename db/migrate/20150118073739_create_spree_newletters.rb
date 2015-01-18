@@ -1,4 +1,4 @@
-class CreateSpreeNewletters < ActiveRecord::Migration
+class CreateSpreeNewsletters < ActiveRecord::Migration
   def change
     create_table :spree_newsletters do |t|
       t.string :email
