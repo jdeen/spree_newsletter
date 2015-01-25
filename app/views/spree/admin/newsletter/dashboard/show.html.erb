@@ -1,8 +1,11 @@
+<h1>Spree Newsletters</h1>
+
 <table>
   <thead>
     <tr>
-      <td>Date</td>
-      <td>Email</td>
+      <th>Date</td>
+      <th>Email</td>
+      <th>Controls</td>
     </tr>
   </thead>
 
@@ -11,6 +14,9 @@
       <tr>
         <td><%= newsletter.created_at %></td>
         <td><%= newsletter.email %></td>
+        <td>
+          <%= link_to 'Destroy', spree_admin_newsletter_delete_path, method: :delete, data: { confirm: "Are you sure?" } %>
+      </td>
       </tr>
     <% end %>
   </tbody>
