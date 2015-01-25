@@ -1,0 +1,17 @@
+<table>
+  <thead>
+    <tr>
+      <td>Date</td>
+      <td>Email</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @newsletters.each do |newsletter| %>
+      <tr>
+        <td><%= newsletter.created_at %></td>
+        <td><%= newsletter.email %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
