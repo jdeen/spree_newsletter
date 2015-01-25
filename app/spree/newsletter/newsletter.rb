@@ -3,7 +3,7 @@ module Spree::Newsletter::Newsletter
   def self.create(:email)
   end
 
-  def self.delete(:email)
+  def self.destroy(:email)
     binding.pry
   end
 

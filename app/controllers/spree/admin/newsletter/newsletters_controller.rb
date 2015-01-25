@@ -16,6 +16,7 @@ class Spree::Admin::Newsletter::NewslettersController < ApplicationController
   end
 
   def destroy
+    Spree::Newsletter::Newsletter.destroy(id: params[:id])
   end
 
 end
