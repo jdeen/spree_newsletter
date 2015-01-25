@@ -15,7 +15,7 @@
         <td><%= newsletter.created_at %></td>
         <td><%= newsletter.email %></td>
         <td>
-          <%= link_to 'Destroy', spree_admin_newsletter_delete_path, method: :delete, data: { confirm: "Are you sure?" } %>
+          <%= link_to 'Destroy', admin_newsletter_newsletter_path(newsletter), method: :delete, data: { confirm: "Are you sure?" } %>
       </td>
       </tr>
     <% end %>
