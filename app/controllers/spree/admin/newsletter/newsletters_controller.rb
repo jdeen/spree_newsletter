@@ -10,6 +10,7 @@ class Spree::Admin::Newsletter::NewslettersController < ApplicationController
   end
 
   def show
+    @newsletters = ::Newsletter::Newsletter.active_newsletters
   end
 
   def update
