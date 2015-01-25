@@ -1,7 +1,7 @@
 class Newsletter::Newsletter
 
   def self.create(email:)
-    newsletter = Spree::Newsletter.create(email: email)
+    newsletter = Spree::Newsletter.where(email: email).first || Spree::Newsletter.create(email: email)
   end
 
   def self.destroy(id: nil)

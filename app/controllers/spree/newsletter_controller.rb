@@ -2,7 +2,7 @@ module Spree
   class NewsletterController < Spree::StoreController
     
     def store
-      newsletter = Spree::Newsletter.where(email: params[:email]).first || Spree::Newsletter.create(newsletter_params)
+      newsletter = ::Newsletter::Newsletter.create(email: params[:email])
 
       respond_to do |format|
         
