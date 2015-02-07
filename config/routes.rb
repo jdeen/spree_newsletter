@@ -1,3 +1,11 @@
 Spree::Core::Engine.routes.draw do
-  # Add your extension routes here
+  post '/newsletter/subscribe' => 'newsletter#store', :as => :newsletter_store
+
+  get '/admin/newsletter' => 'admin/newsletter/dashboard#show', :as => :admin_newsletter_dashboard
+
+  namespace :admin do
+    namespace :newsletter do
+      resources :newsletters
+    end
+  end 
 end

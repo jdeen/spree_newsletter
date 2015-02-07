@@ -1,0 +1,27 @@
+<h1>Spree Newsletters</h1>
+
+<% if @newsletters.length > 0 %>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</td>
+        <th>Email</td>
+        <th>Controls</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @newsletters.each do |newsletter| %>
+        <tr>
+          <td><%= newsletter.created_at %></td>
+          <td><%= newsletter.email %></td>
+          <td>
+            <%= link_to 'Destroy', admin_newsletter_newsletter_path(newsletter), method: :delete, data: { confirm: "Are you sure?" } %>
+        </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>Sorry! There are no newsletters as per the moment.</p>
+<% end %>
