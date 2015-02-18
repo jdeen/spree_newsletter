@@ -13,6 +13,7 @@ Gem::Specification.new do |s|
     The reliance on Spree SlimAdmin means your admin page would get modified
     using Deface overides which you might need to keep an eye.
   EOF
+
   s.required_ruby_version = '>= 1.9.3'
 
   s.author    = 'Ziyan Junaideen'
@@ -24,7 +25,7 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 2.4.2'
+  s.add_dependency 'spree_core', '~> 3.0.x'
 
   s.add_development_dependency 'capybara', '~> 2.4'
   s.add_development_dependency 'coffee-rails'
@@ -32,7 +33,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'factory_girl', '~> 4.5'
   s.add_development_dependency 'ffaker'
   s.add_development_dependency 'rspec-rails',  '~> 3.1'
-  s.add_development_dependency 'sass-rails', '~> 4.0.2'
+  s.add_development_dependency 'sass-rails', '~> 4.0.x'
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'sqlite3'
